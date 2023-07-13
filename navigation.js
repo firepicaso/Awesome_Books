@@ -34,14 +34,14 @@ contact.addEventListener('click', (event) => {
 });
 
 const dateTime = document.querySelector('.date-time');
-const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 setInterval(() => {
   const date = new Date();
-  const month = months[date.getMonth()]
+  const month = months[date.getMonth()];
   const dayFull = `${month} ${date.getDate()} ${date.getFullYear()}`;
   const time = date.getHours;
-  const ampm = (time >= 12) ? "pm" : "am";
+  const ampm = (time >= 12) ? 'pm' : 'am';
   const timeFull = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} ${ampm}`;
   dateTime.innerHTML = `${dayFull}, ${timeFull}`;
 }, 1000);
