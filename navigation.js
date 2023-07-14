@@ -39,7 +39,17 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 setInterval(() => {
   const date = new Date();
   const month = months[date.getMonth()];
-  const dayFull = `${month} ${date.getDate()} ${date.getFullYear()}`;
+  let day = date.getDate().toString();
+  if (day[day.length - 1] === '1') {
+    day += 'st';
+  } else if (day[day.length - 1] === '2') {
+    day += 'nd';
+  } else if (day[day.length - 1] === '3') {
+    day += 'rd';
+  } else {
+    day += 'th';
+  }
+  const dayFull = `${month} ${day} ${date.getFullYear()}`;
   const time = date.getHours;
   const ampm = (time >= 12) ? 'pm' : 'am';
   const timeFull = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} ${ampm}`;
