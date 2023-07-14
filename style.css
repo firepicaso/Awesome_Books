@@ -16,6 +16,11 @@ header {
   margin: 0.5rem;
 }
 
+.nav-div {
+  display: flex;
+  gap: 0.5rem;
+}
+
 header a {
   color: black;
   text-decoration: none;
