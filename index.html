@@ -7,21 +7,52 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <section>
-        <main class="main">
+    <header>
+        <div>
+            <span class="logo-text">Awesome Books</span>
+        </div>
+        <nav class="nav-div">
+            <a class="list" href="">List</a>
+            <span>|</span>
+            <a class="add-new" href="">Add new</a>
+            <span>|</span>
+            <a class="contact" href="">Contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="date-time-section">
+            <p class="date-time"></p>
+        </section>
+        <section class="books-list-section">
             <h1>All awesome books</h1>   
             <div class="books-list"></div>
-            <hr>
-            <h1>Add a new book</h1>
+        </section>
+        <section class="add-new-section hide">
+            <h2>Add a new book</h2>
             <form class="add-form">
                 <label for="title" hidden>Title:</label>
                 <input type="text" class="title" required placeholder="Title"/>
                 <label for="author" hidden>Author:</label>
                 <input type="text" class="author" required placeholder="Author"/>
                 <button type="submit" class="form-btn">Add</button>
-            </form>            
-        </main>
-    </section>
-    <script src="script.js"></script>    
+            </form>
+        </section>
+        <section class="contact-section hide">
+            <h2>Contact Information</h2>
+            <p>
+                Do you have any questions or you just want to say "Hello"?<br>You can reach out to us!
+            </p>
+            <ul>
+                <li>Our e-mail mail@mail.com</li>
+                <li>Our phone number: 0043586534422</li>
+                <li>Our addres: Streetname 22, 84503 City, Country</li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <h3>© 2023 AwesomeBooks</h3>
+        </footer>
+    </main>
+    <script src="script.js"></script>  
+    <script src="navigation.js"></script>  
 </body>
 </html>
